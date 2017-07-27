@@ -1,9 +1,10 @@
 from flask import Blueprint, render_template, current_app, abort, g, \
     url_for, request, session
 from galatea.tryton import tryton
-from galatea.helpers import login_required, customer_required
+from galatea.helpers import customer_required
 from flask_babel import gettext as _, lazy_gettext
 from flask_paginate import Pagination
+from flask_login import login_required
 
 contract = Blueprint('contract', __name__, template_folder='templates')
 
